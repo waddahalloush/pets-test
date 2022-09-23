@@ -32,6 +32,7 @@ dependencies:
   flutter_svg: ^1.1.5
   dotted_border: ^2.0.0+2
   introduction_screen: ^3.0.2
+  carousel_slider: ^4.1.1
 
 
   # The following adds the Cupertino Icons font to your application.

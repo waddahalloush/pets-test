@@ -7,6 +7,7 @@ class AssetsManager {
   static String shareIntroImage = "assets/images/share.png";
   static String adviceIntroImage = "assets/images/advice.png";
   static String findIntroImage = "assets/images/find.png";
+  static String catImage = "assets/images/kitcat.png";
 
   
 }

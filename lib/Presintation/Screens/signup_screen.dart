@@ -17,6 +17,8 @@ class SignUpScreen extends StatelessWidget {
     TextEditingController genderController = TextEditingController();
     TextEditingController nameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
+    List<String> petSex = ["Female", "Male"];
+    String? selectedPetSex = "Female";
     return SafeArea(
         child: Scaffold(
       body: Form(
@@ -105,20 +107,47 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              AuthFormField(
-                label: "Gender",
-                picon: Icons.male,
-                textInputType: TextInputType.name,
-                controller: nameController,
-                validat: (val) {
-                  if (val!.isEmpty) {
-                    return "Your Gender can't Be Empty";
-                  } else {
-                    return null;
-                  }
-                },
-                inputAction: TextInputAction.next,
-              ),
+              DropdownButtonFormField(
+                  decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.male),
+                      labelText: "Gender",
+                      alignLabelWithHint: true,
+                      contentPadding: EdgeInsets.all(3),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      floatingLabelBehavior: FloatingLabelBehavior.never,
+                      labelStyle: TextStyle(color: Colors.grey, fontSize: 10),
+                      floatingLabelAlignment: FloatingLabelAlignment.center),
+                  value: selectedPetSex,
+                  items: petSex
+                      .map((e) => DropdownMenuItem(
+                            value: e,
+                            child: Text(
+                              e,
+                              style: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 10,
+                              ),
+                            ),
+                          ))
+                      .toList(),
+                  onChanged: (String? val) => selectedPetSex = val),
               const SizedBox(
                 height: 5,
               ),

@@ -1,10 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:test/Core/Utils/app_colors.dart';
 
+import 'package:test/Core/Utils/app_colors.dart';
 import 'package:test/Core/Utils/assets_manager.dart';
 import 'package:test/Presintation/Widgets/add_pet_form_field.dart';
+
+import '../Widgets/SharedWidgets/custom_add_button.dart';
 import '../Widgets/choose_pet_widget.dart';
 import '../Widgets/pet_photo_form.dart';
 
@@ -342,22 +344,7 @@ class AddPets extends StatelessWidget {
                 )),
               ],
             ),
-            Container(
-              alignment: Alignment.center,
-              margin: const EdgeInsets.all(5),
-              width: size.width,
-              height: 30,
-              decoration: BoxDecoration(
-                  color: AppColors.addButton,
-                  borderRadius: BorderRadius.circular(3)),
-              child: const Text(
-                "Add Pet",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
+            CustomAddButton(size: size,text:  "Add Pet",ontap: (){}),
             const SizedBox(
               height: 5,
             )
@@ -367,3 +354,4 @@ class AddPets extends StatelessWidget {
     );
   }
 }
+

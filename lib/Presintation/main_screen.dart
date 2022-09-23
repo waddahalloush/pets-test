@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test/Core/Utils/app_colors.dart';
 import 'package:test/Presintation/Screens/add_pets_screen.dart';
-import 'Screens/chart_page.dart';
+import 'Screens/cart_page.dart';
 import 'Screens/home_page.dart';
 import 'Screens/pets_page.dart';
 
@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
   List<Widget> screens = [
     const HomePage(),
     const PetsPage(),
-    const ChartPage(),
+    const CartPage(),
     const AddPets()
   ];
   @override
@@ -43,7 +43,6 @@ class _MainPageState extends State<MainPage> {
                   icon: Icon(Icons.person_outline_rounded), label: "Add"),
             ]),
         body: screens[currentIndex],
-    
       ),
     );
   }
