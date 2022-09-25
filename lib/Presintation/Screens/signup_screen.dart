@@ -14,7 +14,6 @@ class SignUpScreen extends StatelessWidget {
     GlobalKey<FormState> formstate = GlobalKey<FormState>();
     TextEditingController phoneController = TextEditingController();
     TextEditingController addressController = TextEditingController();
-    TextEditingController genderController = TextEditingController();
     TextEditingController nameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     List<String> petSex = ["Female", "Male"];

@@ -19,7 +19,7 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     CarouselController buttonCarouselController = CarouselController();
     int currentPage = 0;
-    Size size = MediaQuery.of(context).size;
+  
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(10),
@@ -177,7 +177,7 @@ class _CartPageState extends State<CartPage> {
             const SizedBox(
               height: 20,
             ),
-            CustomAddButton(size: size, text: "ADD TO CART", ontap: () {})
+            CustomAddButton( text: "ADD TO CART", ontap: () {})
           ],
         ),
       ),

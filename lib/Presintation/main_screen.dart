@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test/Core/Utils/app_colors.dart';
-import 'package:test/Presintation/Screens/add_pets_screen.dart';
-import 'Screens/cart_page.dart';
+import 'package:test/Presintation/Screens/my_cart_screen.dart';
+import 'package:test/Presintation/Screens/profile_screen.dart';
 import 'Screens/home_page.dart';
 import 'Screens/pets_page.dart';
 
@@ -17,8 +17,8 @@ class _MainPageState extends State<MainPage> {
   List<Widget> screens = [
     const HomePage(),
     const PetsPage(),
-    const CartPage(),
-    const AddPets()
+    const MyCartScreen(),
+    const ProfileScreen()
   ];
   @override
   Widget build(BuildContext context) {

@@ -25,7 +25,7 @@ class AddPets extends StatelessWidget {
     TextEditingController petParasiteController = TextEditingController();
     TextEditingController petViralVaccineController = TextEditingController();
     TextEditingController petRabiesVaccineController = TextEditingController();
-    Size size = MediaQuery.of(context).size;
+  
     List<String> petSex = ["Female", "Male"];
     String? selectedPetSex = "Female";
     return Padding(
@@ -344,7 +344,7 @@ class AddPets extends StatelessWidget {
                 )),
               ],
             ),
-            CustomAddButton(size: size,text:  "Add Pet",ontap: (){}),
+            CustomAddButton(text:  "Add Pet",ontap: (){}),
             const SizedBox(
               height: 5,
             )
